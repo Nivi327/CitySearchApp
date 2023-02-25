@@ -3,7 +3,7 @@ let matchList = document.getElementById('match-list');
 
 
 const searchStates = async searchText =>{
-    const res = await fetch('../data/capitals.json');
+    const res = await fetch('../cities.json');
     const cities = await res.json();
 
     let matches = cities.filter(city => {
