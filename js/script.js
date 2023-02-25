@@ -1205,8 +1205,7 @@ const citiesData = [
 ]
 
 const searchStates = async searchText =>{
-    const res = await fetch(citiesData);
-    const cities = await res.json();
+    const cities = json.parse(citiesData);
 
     let matches = cities.filter(city => {
         const regex = new RegExp(`^${searchText}`, 'gi');
